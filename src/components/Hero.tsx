@@ -98,7 +98,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com/in/darrysdev" 
+              href="https://www.linkedin.com/in/brandon-valenciac/"
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
@@ -108,7 +108,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com/darrysdev" 
+              href="https://github.com/darrysx" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-800 text-white hover:bg-gray-900 transition-colors"

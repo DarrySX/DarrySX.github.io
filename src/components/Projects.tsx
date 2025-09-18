@@ -8,7 +8,7 @@ const projects = [
     title: "Sistema de Monitoreo para Flota Pesada",
     company: "RACIEMSA - Grupo Gloria",
     description: "Desarrollo de una plataforma integral para el monitoreo en tiempo real de conductores y camiones, optimizando la logística, seguridad y eficiencia operativa para una de las flotas más grandes del país.",
-    technologies: ["React", "Node.js", "PostgreSQL", "GPS APIs", "AWS"],
+    technologies: ["React", "React Native", "Node.js", "PostgreSQL", "GPS APIs", "AWS"],
     image: "https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg?auto=compress&cs=tinysrgb&w=600",
     reverse: false
   },
@@ -16,7 +16,7 @@ const projects = [
     title: "Marketplace tipo Mercado Libre",
     company: "Proyecto Personal",
     description: "Arquitectura y desarrollo de una plataforma de e-commerce C2C, implementando pasarelas de pago, sistema de reputación, chat en tiempo real y gestión de catálogos.",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io", "Stripe API"],
+    technologies: ["Next.js", "React Native", "TypeScript", "PostgreSQL", "Socket.io", "Firebase", "GCP"],
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
     reverse: true
   },
@@ -24,7 +24,7 @@ const projects = [
     title: "CRM Inmobiliario Avanzado",
     company: "Sector Inmobiliario",
     description: "Creación de un sistema de gestión de relaciones con clientes (CRM) para el sector inmobiliario, automatizando el seguimiento de leads, gestión de propiedades y pipelines de ventas.",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Google Maps API"],
+    technologies: ["React", "Nest.js", "TypeORM", "PostgreSQL", "Google Maps API"],
     image: "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=600",
     reverse: false
   },
