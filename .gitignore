@@ -100,3 +100,7 @@ ehthumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Local scripts (optional - remove if you want to include them)
+# check-ssl.sh
+# deploy.sh
