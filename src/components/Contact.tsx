@@ -12,7 +12,7 @@ export default function Contact() {
   });
   
   const [copied, setCopied] = useState(false);
-  const email = "darrys@darrysdev.me";
+  const email = "brandon.valencia.calderon@gmail.com";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email);

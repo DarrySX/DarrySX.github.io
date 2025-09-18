@@ -35,9 +35,9 @@ npm run dev
 - `npm run build` - Construye el proyecto para producción
 - `npm run preview` - Previsualiza la build de producción
 
-## 🌐 Despliegue
+## 🌐 Despliegue y SSL
 
-El sitio está configurado para desplegarse en el dominio `darrysdev.me` usando GitHub Pages.
+El sitio está configurado para desplegarse en el dominio `darrysdev.me` usando GitHub Pages con SSL automático.
 
 ### Configuración de Producción
 
@@ -45,12 +45,46 @@ El proyecto ya está configurado para:
 - **Dominio**: darrysdev.me (configurado en CNAME)
 - **Site URL**: https://darrysdev.me (configurado en astro.config.mjs)
 - **GitHub Pages**: Listo para despliegue automático
+- **SSL**: Certificado automático de GitHub
 
-### Para desplegar:
+### Despliegue
 
-1. Haz push de tus cambios a la rama main
-2. GitHub Pages automáticamente construirá y desplegará el sitio
-3. El sitio estará disponible en https://darrysdev.me
+#### Método 1: Script Automático
+```bash
+./deploy.sh
+```
+
+#### Método 2: Manual
+```bash
+npm run build
+git add .
+git commit -m "Deploy: nuevos cambios"
+git push origin main
+```
+
+### Configurar HTTPS en GitHub
+
+1. Ve a **GitHub** → **Settings** → **Pages**
+2. Verifica que **Custom domain** sea: `darrysdev.me`
+3. **MARCA** la casilla **"Enforce HTTPS"** ✅
+4. Espera 5-10 minutos para que se aplique
+
+### Verificar SSL
+
+Usa el script incluido para verificar el estado del SSL:
+```bash
+./check-ssl.sh
+```
+
+### Troubleshooting SSL
+
+Si encuentras problemas con SSL:
+1. **Espera 24-48 horas** para propagación DNS completa
+2. Verifica que los DNS A records estén correctos
+3. Asegúrate que "Enforce HTTPS" esté activado en GitHub Pages
+4. El certificado SSL se regenera automáticamente cada 90 días
+
+El sitio estará disponible en: **https://darrysdev.me** 🚀
 
 ## 🛠️ Tecnologías
 
