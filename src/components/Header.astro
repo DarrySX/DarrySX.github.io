@@ -1,0 +1,80 @@
+---
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
+---
+
+<header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-border/20">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="#inicio" class="text-2xl font-bold gradient-text">
+          darrysdev
+        </a>
+      </div>
+      
+      <!-- Navigation Desktop -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="text-muted-foreground hover:text-primary transition-colors">Inicio</a>
+        <a href="#servicios" class="text-muted-foreground hover:text-primary transition-colors">Servicios</a>
+        <a href="#experiencia" class="text-muted-foreground hover:text-primary transition-colors">Experiencia</a>
+        <a href="#contacto" class="text-muted-foreground hover:text-primary transition-colors">Contacto</a>
+      </nav>
+      
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center space-x-2">
+        <ThemeToggle client:only="react" />
+        <Button asChild size="sm" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+          <a href="#contacto">Contactar</a>
+        </Button>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center space-x-2">
+        <ThemeToggle client:only="react" />
+        <button id="mobile-menu-button" class="p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="md:hidden hidden pb-4 space-y-2">
+      <a href="#inicio" class="block py-2 text-muted-foreground hover:text-primary transition-colors">Inicio</a>
+      <a href="#servicios" class="block py-2 text-muted-foreground hover:text-primary transition-colors">Servicios</a>
+      <a href="#experiencia" class="block py-2 text-muted-foreground hover:text-primary transition-colors">Experiencia</a>
+      <a href="#contacto" class="block py-2 text-muted-foreground hover:text-primary transition-colors">Contacto</a>
+      <Button asChild size="sm" class="mt-2 bg-gradient-to-r from-blue-600 to-purple-600">
+        <a href="#contacto">Contactar</a>
+      </Button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href') as string);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        // Close mobile menu
+        mobileMenu?.classList.add('hidden');
+      }
+    });
+  });
+</script>

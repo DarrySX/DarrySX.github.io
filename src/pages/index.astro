@@ -1,0 +1,70 @@
+---
+import '@/styles/globals.css';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { ThemeProvider } from '../components/ThemeProvider.tsx';
+import Hero from '../components/Hero.tsx';
+import Services from '../components/Services.tsx';
+import Projects from '../components/Projects.tsx';
+import Contact from '../components/Contact.tsx';
+import Footer from '../components/Footer.astro';
+
+const seoData = {
+  title: "Darrys Dev | Desarrollador FullStack para Soluciones de Software a Medida",
+  description: "Desarrollador de software FullStack experto en crear aplicaciones web de alto rendimiento como E-commerce, CRMs y sistemas logísticos. Convierte tu idea en una realidad.",
+  keywords: "desarrollador fullstack, programador web, desarrollo software, aplicaciones web, react, node.js, typescript, astro, ecommerce, crm, sistemas web"
+};
+---
+
+<Layout {...seoData}>
+  <ThemeProvider
+    attribute="class"
+    defaultTheme="system"
+    enableSystem
+    disableTransitionOnChange
+    client:load
+  >
+    <Header />
+    
+    <main>
+      <Hero client:load />
+      <Services client:load />
+      <Projects client:load />
+      <Contact client:load />
+    </main>
+    
+    <Footer />
+  </ThemeProvider>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  // Intersection Observer for header background
+  const header = document.getElementById('header');
+  const hero = document.getElementById('inicio');
+  
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          header?.classList.add('bg-background/95');
+          header?.classList.remove('bg-background/80');
+        } else {
+          header?.classList.remove('bg-background/95');
+          header?.classList.add('bg-background/80');
+        }
+      });
+    },
+    { rootMargin: '-80px 0px 0px 0px' }
+  );
+
+  if (hero) {
+    observer.observe(hero);
+  }
+</script>
+</Layout>
