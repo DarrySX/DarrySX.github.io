@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "astro.content-intellisense": true,
+    "astro.format.enable": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "emmet.includeLanguages": {
+        "astro": "html"
+    }
+}

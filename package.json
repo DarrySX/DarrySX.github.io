@@ -1,8 +1,11 @@
 {
-  "name": "@example/basics",
+  "name": "darrysdev-portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "description": "Portfolio personal de DarrySX",
+  "author": "DarrySX",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
