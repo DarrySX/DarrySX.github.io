@@ -62,23 +62,23 @@ const seoData = {
   }
 
   // Smooth scrolling for all anchor links
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
         e.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
+
+        const targetId = this.getAttribute("href").substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
           const headerHeight = 80;
           const targetPosition = targetElement.offsetTop - headerHeight;
-          
+
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       });
@@ -88,34 +88,34 @@ const seoData = {
 
 <!-- Structured Data for Portfolio -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "@id": "https://darrysdev.me/#portfolio",
-  "name": "Portfolio de DarryS Dev",
-  "description": "Portfolio profesional mostrando proyectos de desarrollo web, aplicaciones E-commerce, CRMs y sistemas logísticos",
-  "url": "https://darrysdev.me",
-  "author": {
-    "@type": "Person",
-    "name": "DarryS",
-    "url": "https://darrysdev.me"
-  },
-  "workExample": [
-    {
-      "@type": "CreativeWork",
-      "name": "Aplicaciones E-commerce",
-      "description": "Desarrollo de tiendas online completas con sistemas de pago integrados"
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": "https://darrysdev.me/#portfolio",
+    "name": "Portfolio de DarryS Dev",
+    "description": "Portfolio profesional mostrando proyectos de desarrollo web, aplicaciones E-commerce, CRMs y sistemas logísticos",
+    "url": "https://darrysdev.me",
+    "author": {
+      "@type": "Person",
+      "name": "DarryS",
+      "url": "https://darrysdev.me"
     },
-    {
-      "@type": "CreativeWork", 
-      "name": "Sistemas CRM",
-      "description": "Gestión de relaciones con clientes y automatización de procesos de venta"
-    },
-    {
-      "@type": "CreativeWork",
-      "name": "Sistemas Logísticos",
-      "description": "Optimización de cadenas de suministro y gestión de inventarios"
-    }
-  ]
-}
+    "workExample": [
+      {
+        "@type": "CreativeWork",
+        "name": "Aplicaciones E-commerce",
+        "description": "Desarrollo de tiendas online completas con sistemas de pago integrados"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Sistemas CRM",
+        "description": "Gestión de relaciones con clientes y automatización de procesos de venta"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Sistemas Logísticos",
+        "description": "Optimización de cadenas de suministro y gestión de inventarios"
+      }
+    ]
+  }
 </script>
