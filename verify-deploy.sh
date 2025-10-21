@@ -46,12 +46,6 @@ else
     echo "❌ Página principal no generada"
 fi
 
-if [ -f "dist/RenaWare/index.html" ]; then
-    echo "✅ Página RenaWare generada"
-else
-    echo "❌ Página RenaWare no generada"
-fi
-
 # Verificar tamaño de archivos
 echo "📊 Verificando tamaño de archivos..."
 echo "Tamaño del directorio dist:"
