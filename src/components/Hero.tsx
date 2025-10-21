@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-950 dark:via-blue-950/30 dark:to-purple-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-cyan-50/30 to-blue-100/50 dark:from-blue-950/30 dark:via-cyan-950/20 dark:to-blue-900/30" />
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -32,7 +32,19 @@ export default function Hero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-3/4 right-1/4 w-24 h-24 bg-purple-500/20 dark:bg-purple-400/10 rounded-full blur-xl"
+          className="absolute top-3/4 right-1/4 w-24 h-24 bg-cyan-500/20 dark:bg-cyan-400/10 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, -180, -360],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/2 right-1/3 w-16 h-16 bg-blue-600/15 dark:bg-blue-300/8 rounded-full blur-lg"
         />
       </div>
 
@@ -74,7 +86,7 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+              className="gradient-bg hover:opacity-90 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <a href="#experiencia">Ver mis Proyectos</a>
             </Button>
@@ -82,7 +94,7 @@ export default function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="px-8 py-3 text-lg hover:bg-primary hover:text-primary-foreground"
+              className="px-8 py-3 text-lg border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               <a href="#contacto">Hablemos de tu Idea</a>
             </Button>

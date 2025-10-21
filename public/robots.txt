@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://darrysdev.me/sitemap.xml
+
+# Specific crawl directives
+Allow: /Logo.png
+Allow: /favicon.svg
+Allow: /_astro/
+
+# Disallow development files
+Disallow: /package.json
+Disallow: /astro.config.mjs
+Disallow: /tailwind.config.mjs
+Disallow: /tsconfig.json
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Allow specific pages
+Allow: /
+Allow: /RenaWare

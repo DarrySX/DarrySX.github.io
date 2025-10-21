@@ -1,24 +1,18 @@
 import { ThemeProvider } from './ThemeProvider';
-import { Header } from './Header';
-import { Hero } from './Hero';
-import { Services } from './Services';
-import { Projects } from './Projects';
-import { Contact } from './Contact';
-import { Footer } from './Footer';
+import Hero from './Hero';
+import Services from './Services';
+import Projects from './Projects';
+import Contact from './Contact';
 
 export function App() {
     return (
         <ThemeProvider>
-            <div className="min-h-screen">
-                <Header />
-                <main>
-                    <Hero />
-                    <Services />
-                    <Projects />
-                    <Contact />
-                </main>
-                <Footer />
-            </div>
+            <main>
+                <Hero />
+                <Services />
+                <Projects />
+                <Contact />
+            </main>
         </ThemeProvider>
     );
 }

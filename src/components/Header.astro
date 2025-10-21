@@ -10,8 +10,15 @@ import { HeaderReact } from "@/components/HeaderReact";
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="#inicio" class="text-2xl font-bold gradient-text">
-          DarrySDev
+        <a href="#inicio" class="flex items-center space-x-2">
+          <img 
+            src="/Logo.png" 
+            alt="DarrySDev Logo" 
+            class="h-10 w-auto"
+          />
+          <span class="text-xl font-bold gradient-text hidden sm:block">
+            DarrySDev
+          </span>
         </a>
       </div>
 
@@ -36,6 +43,11 @@ import { HeaderReact } from "@/components/HeaderReact";
           href="#contacto"
           class="text-muted-foreground hover:text-primary transition-colors"
           >Contacto</a
+        >
+        <a
+          href="/RenaWare"
+          class="text-primary hover:text-accent transition-colors font-medium"
+          >RenaWare</a
         >
       </nav>
 

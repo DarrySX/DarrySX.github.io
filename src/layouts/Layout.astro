@@ -70,6 +70,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta name="author" content="DarryS - Desarrollador FullStack" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="es" />
+    <meta name="theme-color" content="#0066ff" />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Facebook -->
@@ -77,17 +81,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="DarrySDev - Portfolio" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImage} />
+    <meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="twitter:creator" content="@darrysdev" />
+
+    <!-- Additional SEO -->
+    <meta name="geo.region" content="ES" />
+    <meta name="geo.placename" content="España" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/Logo.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,26 +119,138 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       {
         "@context": "https://schema.org/",
         "@type": "Person",
-        "name": "Darrys - Desarrollador FullStack",
+        "name": "DarryS",
+        "alternateName": "DarrySDev",
         "url": "https://darrysdev.me",
+        "image": "https://darrysdev.me/Logo.png",
         "jobTitle": "Desarrollador FullStack Senior",
+        "description": "Desarrollador de software FullStack especializado en aplicaciones web de alto rendimiento, E-commerce, CRMs y sistemas logísticos.",
         "worksFor": {
           "@type": "Organization",
           "name": "Freelance"
         },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Desarrollador de Software",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "España"
+          },
+          "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Python",
+            "PostgreSQL",
+            "AWS",
+            "Docker",
+            "Git",
+            "Astro",
+            "Next.js",
+            "Tailwind CSS"
+          ]
+        },
         "knowsAbout": [
+          "Desarrollo Web",
+          "Programación FullStack",
           "JavaScript",
           "TypeScript",
           "React",
           "Node.js",
           "Python",
           "PostgreSQL",
-          "AWS"
+          "AWS",
+          "E-commerce",
+          "CRM",
+          "Sistemas Logísticos"
         ],
         "sameAs": [
           "https://www.linkedin.com/in/darrysdev/",
           "https://github.com/darrysdev"
-        ]
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DarrySDev - Portfolio",
+        "alternateName": "DarryS Dev",
+        "url": "https://darrysdev.me",
+        "description": "Portfolio profesional de DarryS, desarrollador FullStack especializado en soluciones web a medida.",
+        "author": {
+          "@type": "Person",
+          "name": "DarryS"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://darrysdev.me/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Desarrollo de Software FullStack",
+        "description": "Servicios profesionales de desarrollo web, aplicaciones E-commerce, CRMs y sistemas logísticos personalizados.",
+        "provider": {
+          "@type": "Person",
+          "name": "DarryS",
+          "url": "https://darrysdev.me"
+        },
+        "serviceType": [
+          "Desarrollo Web",
+          "Desarrollo de Aplicaciones",
+          "E-commerce",
+          "CRM",
+          "Sistemas Logísticos"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "España"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Desarrollo",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo Web Frontend",
+                "description": "Desarrollo de interfaces modernas y responsivas con React, Next.js y TypeScript"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo Backend",
+                "description": "APIs robustas y escalables con Node.js, Python y bases de datos SQL/NoSQL"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-commerce",
+                "description": "Tiendas online completas con sistemas de pago y gestión de inventario"
+              }
+            }
+          ]
+        }
       }
     </script>
   </head>

@@ -1,22 +1,73 @@
-# DarrySX Portfolio
+# DarrySDev Portfolio
 
-Portfolio personal de DarrySX construido con Astro, React, TypeScript y Tailwind CSS.
+Portfolio profesional de DarryS, desarrollador FullStack especializado en soluciones web a medida.
 
-## 🚀 Configuración del Proyecto
+## 🌟 Características Principales
 
-### Prerrequisitos
-- Node.js (versión 18 o superior)
-- npm, yarn o pnpm
+- **Diseño Moderno**: Interface limpia y profesional con tema oscuro/claro
+- **Responsive**: Optimizado para todos los dispositivos
+- **Alto Rendimiento**: Construido con Astro y React
+- **SEO Optimizado**: Meta tags, datos estructurados y sitemap incluidos
+- **Aplicación RenaWare**: Herramienta especializada para asesoras de ventas integrada
 
-### Instalación Local
+## 🎨 Paleta de Colores Actualizada
 
-1. Clona el repositorio:
-```bash
-git clone https://github.com/DarrySX/DarrySX.github.io.git
-cd DarrySX.github.io
-```
+El sitio utiliza una paleta de colores basada en el logo corporativo:
 
-2. Instala las dependencias:
+- **Primario**: `hsl(210, 100%, 50%)` - Azul principal del logo
+- **Acento**: `hsl(185, 100%, 50%)` - Cian/Turquesa complementario
+- **Gradientes**: Combinaciones armoniosas entre azul y cian para efectos visuales
+
+## 🚀 Tecnologías Utilizadas
+
+- **[Astro](https://astro.build/)** - Framework web moderno
+- **[React](https://reactjs.org/)** - Componentes interactivos
+- **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático
+- **[Tailwind CSS](https://tailwindcss.com/)** - Estilos utilitarios
+- **[Framer Motion](https://www.framer.com/motion/)** - Animaciones fluidas
+- **[Radix UI](https://www.radix-ui.com/)** - Componentes accesibles
+
+## � Optimizaciones SEO Implementadas
+
+### Meta Tags y Estructura
+- **Meta Tags Completos**: Títulos, descripciones y keywords optimizados
+- **Open Graph**: Metadatos para compartir en redes sociales
+- **Twitter Cards**: Optimización para Twitter
+- **Datos Estructurados**: Schema.org para mejores resultados de búsqueda
+
+### Archivos de SEO
+- **`/sitemap.xml`**: Mapa del sitio para crawlers
+- **`/robots.txt`**: Directivas para bots de búsqueda
+- **URLs Canónicas**: Evita contenido duplicado
+- **Metadatos por Página**: Cada sección optimizada individualmente
+
+### Estructura de Datos Schema.org
+- **Person Schema**: Información del desarrollador
+- **WebSite Schema**: Datos del sitio web
+- **Service Schema**: Servicios ofrecidos
+- **CreativeWork Schema**: Portfolio de proyectos
+
+## 📱 Aplicación RenaWare Integrada
+
+Nueva funcionalidad: **Herramienta digital para asesoras de ventas RenaWare**
+
+### Características de la App
+- **Dashboard Interactivo**: Métricas y estadísticas de ventas en tiempo real
+- **Gestión de Clientes**: CRM simplificado para seguimiento de leads
+- **Catálogo de Productos**: Información detallada de productos RenaWare
+- **Calculadora de Comisiones**: Herramientas de cálculo automático
+- **Diseño Responsivo**: Optimizada para uso móvil y desktop
+
+### Acceso a la Aplicación
+- **URL**: `/RenaWare`
+- **Enlace en Navegación**: Disponible desde el menu principal
+- **Datos Estructurados**: SEO optimizado para la landing page
+
+### Tecnologías Específicas
+- **React Hooks**: Estado local para gestión de datos
+- **Framer Motion**: Animaciones suaves y profesionales
+- **Componentes UI**: Sistema de diseño consistente
+- **Responsive Design**: Adaptable a todos los dispositivos
 ```bash
 npm install
 ```

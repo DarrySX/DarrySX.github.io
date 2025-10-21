@@ -11,7 +11,7 @@ export function HeaderReact() {
             {/* Desktop buttons */}
             <div className="hidden md:flex items-center space-x-2">
                 <ThemeToggle />
-                <Button asChild size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button asChild size="sm" className="gradient-bg hover:opacity-90 text-white">
                     <a href="#contacto">Contactar</a>
                 </Button>
             </div>
@@ -36,7 +36,8 @@ export function HeaderReact() {
                     <a href="#servicios" className="block py-2 text-muted-foreground hover:text-primary transition-colors">Servicios</a>
                     <a href="#experiencia" className="block py-2 text-muted-foreground hover:text-primary transition-colors">Experiencia</a>
                     <a href="#contacto" className="block py-2 text-muted-foreground hover:text-primary transition-colors">Contacto</a>
-                    <Button asChild size="sm" className="mt-2 bg-gradient-to-r from-blue-600 to-purple-600">
+                    <a href="/RenaWare" className="block py-2 text-primary hover:text-accent transition-colors font-medium">RenaWare</a>
+                    <Button asChild size="sm" className="mt-2 gradient-bg hover:opacity-90 text-white">
                         <a href="#contacto">Contactar</a>
                     </Button>
                 </nav>
