@@ -15,6 +15,14 @@ else
     exit 1
 fi
 
+# Asegurar que .nojekyll existe en dist
+echo "📝 Verificando archivo .nojekyll..."
+if [ ! -f "dist/.nojekyll" ]; then
+    echo "⚠️  Creando archivo .nojekyll en dist/"
+    touch dist/.nojekyll
+fi
+echo "✅ Archivo .nojekyll presente"
+
 # Hacer commit y push
 echo "📤 Desplegando a GitHub..."
 git add .
